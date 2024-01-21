@@ -1,3 +1,7 @@
+#include <c10/cuda/CUDAException.h>
+#include <c10/cuda/CUDAStream.h>
+
+
 __global__
 void mean_filter_kernel(unsigned char* output, unsigned char* input, int width, int height, int radius) {
     int col = blockIdx.x * blockDim.x + threadIdx.x;
@@ -49,13 +53,16 @@ torch::Tensor mean_filter(torch::Tensor image, int radius) {
         cdiv(height, threads_per_block.y)
     );
 
-    mean_filter_kernel<<<number_of_blocks, threads_per_block>>>(
+    mean_filter_kernel<<<number_of_blocks, threads_per_block, 0, torch::cuda::getCurrentCUDAStream()>>>(
         result.data_ptr<unsigned char>(),
         image.data_ptr<unsigned char>(),
         width,
         height,
         radius
     );
+
+    // check CUDA error status (calls cudaGetLastError())
+    C10_CUDA_KERNEL_LAUNCH_CHECK();
 
     return result;
 }

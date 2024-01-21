@@ -1,3 +1,7 @@
+#include <c10/cuda/CUDAException.h>
+#include <c10/cuda/CUDAStream.h>
+
+
 __global__
 void rgb_to_grayscale_kernel(unsigned char* output, unsigned char* input, int width, int height) {
     const int channels = 3;
@@ -32,16 +36,19 @@ torch::Tensor rgb_to_grayscale(torch::Tensor image) {
 
     auto result = torch::empty({height, width, 1}, torch::TensorOptions().dtype(torch::kByte).device(image.device()));
 
-    dim3 threads_per_block(16, 16);
+    dim3 threads_per_block(16, 16);     // using 256 threads per block
     dim3 number_of_blocks(cdiv(width, threads_per_block.x),
                           cdiv(height, threads_per_block.y));
 
-    rgb_to_grayscale_kernel<<<number_of_blocks, threads_per_block>>>(
+    rgb_to_grayscale_kernel<<<number_of_blocks, threads_per_block, 0, torch::cuda::getCurrentCUDAStream()>>>(
         result.data_ptr<unsigned char>(),
         image.data_ptr<unsigned char>(),
         width,
         height
     );
+
+    // check CUDA error status (calls cudaGetLastError())
+    C10_CUDA_KERNEL_LAUNCH_CHECK();
 
     return result;
 }
