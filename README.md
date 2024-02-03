@@ -16,3 +16,10 @@
 - Date: 2024-01-27, Speaker: [Jeremy Howard](https://twitter.com/jeremyphoward)
 - Notebook: See the `lecture3` folder, or run the [Colab version](https://colab.research.google.com/drive/180uk6frvMBeT4tywhhYXmz3PJaCIA_uk?usp=sharing)
 
+
+## Lecture 4
+
+- Title: Intro to Compute and Memory Architecture
+- Date: 2024-02-03, Speaker: [Thomas Viehmann](https://lernapparat.de/)
+- Notebook and slides in the `lecture4` folder.
+
