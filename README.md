@@ -1,4 +1,9 @@
-# Supplementary Material for Lectures 2 & 3
+# Supplementary Material for Lectures
+
+## Lecture 1
+- Profiling and Integrating CUDA kernels in PyTorch
+- Date: 2024-01-13, Speaker: [Mark Saroufim](https://twitter.com/marksaroufim)
+- Notebook and slides in `lecture1` folder
 
 ## Lecture 2
 
