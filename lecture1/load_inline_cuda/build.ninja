@@ -1,0 +1,34 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda/bin/nvcc
+
+cflags = -DTORCH_EXTENSION_NAME=square_matrix_extension -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include/TH -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include/THC -isystem /usr/local/cuda/include -isystem /opt/conda/envs/cudamode/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++17
+post_cflags = 
+cuda_cflags = -DTORCH_EXTENSION_NAME=square_matrix_extension -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include/TH -isystem /opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/include/THC -isystem /usr/local/cuda/include -isystem /opt/conda/envs/cudamode/include/python3.10 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 --compiler-options '-fPIC' -std=c++17
+cuda_post_cflags = 
+cuda_dlink_post_cflags = 
+ldflags = -shared -L/opt/conda/envs/cudamode/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc  $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+rule link
+  command = $cxx $in $ldflags -o $out
+
+build main.o: compile /home/ubuntu/cudamode/cudamodelecture1/load_inline_cuda/main.cpp
+build cuda.cuda.o: cuda_compile /home/ubuntu/cudamode/cudamodelecture1/load_inline_cuda/cuda.cu
+
+
+
+build square_matrix_extension.so: link main.o cuda.cuda.o
+
+default square_matrix_extension.so
