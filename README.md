@@ -4,14 +4,17 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 
 ## Lecture 1
-- Profiling and Integrating CUDA kernels in PyTorch
+
+- Title: Profiling and Integrating CUDA kernels in PyTorch
+- [Video](https://youtu.be/LuhJEEJQgUM)
 - Date: 2024-01-13, Speaker: [Mark Saroufim](https://twitter.com/marksaroufim)
 - Notebook and slides in `lecture1` folder
 
 
 ## Lecture 2
 
-- Recap Ch. 1-3 from the PMPP book
+- Title: Recap Ch. 1-3 from the PMPP book
+- [Video](https://youtu.be/NQ-0D5Ti2dc)
 - Date: 2024-01-20, Speaker: [Andreas Koepf](https://twitter.com/neurosp1ke)
 - Slides: The powerpoint file [lecture2/cuda_mode_lecture2.pptx](./lecture2/cuda_mode_lecture2.pptx) can be found in the root directory of this repository. Alternatively [here](https://docs.google.com/presentation/d/1deqvEHdqEC4LHUpStO6z3TT77Dt84fNAvTIAxBJgDck/edit#slide=id.g2b1444253e5_1_75) as Google docs presentation.
 - Examples: Please make sure PyTorch (2.1.2) and cuda-toolkit (nvcc compiler) are installed.
@@ -23,6 +26,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 3
 
 - Title: Getting Started With CUDA
+- [Video](https://youtu.be/4sgKnKbR-WE)
 - Date: 2024-01-27, Speaker: [Jeremy Howard](https://twitter.com/jeremyphoward)
 - Notebook: See the `lecture3` folder, or run the [Colab version](https://colab.research.google.com/drive/180uk6frvMBeT4tywhhYXmz3PJaCIA_uk?usp=sharing)
 
@@ -30,5 +34,14 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 4
 
 - Title: Intro to Compute and Memory Architecture
+- [Video](https://youtu.be/lTmYrKwjSOU)
 - Date: 2024-02-03, Speaker: [Thomas Viehmann](https://lernapparat.de/)
 - Notebook and slides in the `lecture4` folder.
+
+
+## Lecture 5
+
+- Title: Going Further with CUDA for Python Programmers
+- [Video](https://youtu.be/wVsR-YhaHlM)
+- Date: 2024-02-10, Speaker: [Jeremy Howard](https://twitter.com/jeremyphoward)
+- Notebook in the `lecture5` folder.
