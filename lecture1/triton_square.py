@@ -3,6 +3,10 @@ import triton
 import triton.language as tl
 import torch
 
+# if @triton.jit(interpret=True) does not work, please use the following two lines to enable interpret mode
+# import os
+# os.environ["TRITON_INTERPRET"] = "1"
+
 @triton.jit
 def square_kernel(output_ptr, input_ptr, input_row_stride, output_row_stride, n_cols, BLOCK_SIZE: tl.constexpr):
     # The rows of the softmax are independent, so we parallelize across those
