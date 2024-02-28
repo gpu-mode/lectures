@@ -40,3 +40,21 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - [Video](https://youtu.be/wVsR-YhaHlM)
 - Date: 2024-02-10, Speaker: [Jeremy Howard](https://twitter.com/jeremyphoward)
 - Notebook in the `lecture5` folder.
+
+
+## Lecture 6: Optimizing PyTorch Optimizers
+- [Video](https://www.youtube.com/watch?v=hIop0mWKPHc)
+- Date: 2024-02-17, Speaker: [Jane Xu](https://github.com/janeyx99)
+- [Slides](https://docs.google.com/presentation/d/13WLCuxXzwu5JRZo0tAfW0hbKHQMvFw4O/edit#slide=id.p1)
+
+
+## Lecture 7: Advanced Quantization
+- [Video](https://www.youtube.com/watch?v=1u9xUK3G4VM)
+- Date: 2024-02-25, Speaker: [Charles Hernandez](https://github.com/HDCharles)
+- [Slides](https://www.dropbox.com/scl/fi/hzfx1l267m8gwyhcjvfk4/Quantization-Cuda-vs-Triton.pdf?rlkey=s4j64ivi2kpp2l0uq8xjdwbab&dl=0)
+
+
+## Lecture 8: CUDA Performance Checklist
+- Video TBD
+- Date: 2024, Speaker: [Mark Saroufim](https://github.com/msaroufim)
+- Code in the `lecture8` folder
