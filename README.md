@@ -51,7 +51,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 
 ## Lecture 8: CUDA Performance Checklist
-- Video TBD
+- [Video](https://www.youtube.com/watch?v=SGhfUhlowB4)
 - Date: 2024, Speaker: [Mark Saroufim](https://github.com/msaroufim)
 - Code in the `lecture8` folder
 - [Slides](https://docs.google.com/presentation/d/1cvVpf3ChFFiY4Kf25S4e4sPY6Y5uRUO-X-A4nJ7IhFE/edit?usp=sharing)
