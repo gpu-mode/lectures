@@ -55,3 +55,10 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Date: 2024, Speaker: [Mark Saroufim](https://github.com/msaroufim)
 - Code in the `lecture8` folder
 - [Slides](https://docs.google.com/presentation/d/1cvVpf3ChFFiY4Kf25S4e4sPY6Y5uRUO-X-A4nJ7IhFE/edit?usp=sharing)
+
+
+## Lecture 9: Reductions
+- [Video](https://www.youtube.com/watch?v=09wntC6BT5o)
+- Date: 2024, Speaker: [Mark Saroufim](https://github.com/msaroufim)
+- Code in the `lecture9` folder
+- [Slides](https://docs.google.com/presentation/d/1s8lRU8xuDn-R05p1aSP6P7T5kk9VYnDOCyN5bWKeg3U/edit)
