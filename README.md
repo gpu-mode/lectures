@@ -52,9 +52,20 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 ## Lecture 8: CUDA Performance Checklist
 - [Video](https://www.youtube.com/watch?v=SGhfUhlowB4)
-- Date: 2024, Speaker: [Mark Saroufim](https://github.com/msaroufim)
+- Date: 2024-03-09, Speaker: [Mark Saroufim](https://github.com/msaroufim)
 - Code in the `lecture8` folder
 - [Slides](https://docs.google.com/presentation/d/1cvVpf3ChFFiY4Kf25S4e4sPY6Y5uRUO-X-A4nJ7IhFE/edit?usp=sharing)
+
+## Lecture 9: Reductions
+- [Video](https://www.youtube.com/watch?v=09wntC6BT5o)
+- Date: 2024-03-09, Speaker: [Mark Saroufim](https://github.com/msaroufim)
+- Code in the `lecture9` folder
+- [Slides](https://docs.google.com/presentation/d/1s8lRU8xuDn-R05p1aSP6P7T5kk9VYnDOCyN5bWKeg3U/edit?usp=drive_link)
+
+## Lecture 10: Build a Prod Ready CUDA Library
+* [Video](https://www.youtube.com/watch?v=FHsEW0HpuoU)
+* Date: 2024-03-16, Speaker: [Oscar Amoros Huguet](https://github.com/morousg)
+* [slides](https://drive.google.com/drive/folders/158V8BzGj-IkdXXDAdHPNwUzDLNmr971_?usp=drive_link)
 
 
 ## Lecture 9: Reductions
