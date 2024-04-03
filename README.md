@@ -66,3 +66,8 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 * [Video](https://www.youtube.com/watch?v=FHsEW0HpuoU)
 * Date: 2024-03-16, Speaker: [Oscar Amoros Huguet](https://github.com/morousg)
 * [slides](https://drive.google.com/drive/folders/158V8BzGj-IkdXXDAdHPNwUzDLNmr971_?usp=drive_link)
+
+## Lecture 11: Sparsity
+* [Video](https://youtu.be/mGDnOLcfE8g)
+* Date: 2024-03-23, Speaker: [Jesse Cai](https://github.com/jcaip)
+* [Slides](./lecture11/sparsity.pptx)
