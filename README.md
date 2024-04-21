@@ -71,3 +71,17 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 * [Video](https://youtu.be/mGDnOLcfE8g)
 * Date: 2024-03-23, Speaker: [Jesse Cai](https://github.com/jcaip)
 * [Slides](./lecture11/sparsity.pptx)
+
+## Lecture 12: Flash Attention
+- [Video](https://www.youtube.com/watch?v=zEuwuCTEf_0)
+- Date: 2024-03-30, Speaker: [Thomas Viehmann](https://lernapparat.de/)
+
+## Lecture 13: Ring Attention
+- [Video](https://www.youtube.com/watch?v=ws7angQYIxI)
+- Date: 2024-04-06, Speaker: [Andreas Koepf](https://twitter.com/neurosp1ke)
+- [Slides](./lecture13/ring_attention.pptx)
+
+## Lecture 14: Practitioner's Guide to Triton
+- [Video](https://www.youtube.com/watch?v=DdTsX6DQk24)
+- Date: 2024-04-13, Speaker: [Umer Adil](https://twitter.com/UmerHAdil)
+- [Notebook](./lecture 14/A_Practitioners_Guide_to_Triton.ipynb)
