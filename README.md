@@ -84,4 +84,4 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 14: Practitioner's Guide to Triton
 - [Video](https://www.youtube.com/watch?v=DdTsX6DQk24)
 - Date: 2024-04-13, Speaker: [Umer Adil](https://twitter.com/UmerHAdil)
-- [Notebook](./lecture 14/A_Practitioners_Guide_to_Triton.ipynb)
+- [Notebook](lecture 14/A_Practitioners_Guide_to_Triton.ipynb)
