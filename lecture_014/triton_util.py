@@ -36,7 +36,7 @@ def print_if(txt, conds, pid_0=[0], pid_1=[0], pid_2=[0]):
 
 def check_tensors_gpu_ready(*tensors):
     for t in tensors:
-        assert t.is_contiguous, "A tensor is not contiguous"
+        assert t.is_contiguous(), "A tensor is not contiguous"
         if not os.environ.get('TRITON_INTERPRET') == '1': assert t.is_cuda, "A tensor is not on cuda"
 
 def cdiv(a,b): return (a + b - 1) // b
