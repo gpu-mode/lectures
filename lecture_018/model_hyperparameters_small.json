@@ -1,0 +1,49 @@
+{
+  "data_path": {
+    "train": "./data/sample_criteo_data.parquet",
+    "validation": "./data/sample_criteo_data.parquet"
+  },
+  "metadata_path": "./data/sample_criteo_metadata.json",
+  "model_path": "./data/dlrm_criteo_model.pt",
+  "tensorboard_dir": "./tb_logs",
+  "dense_input_feature_size": 13,
+  "sparse_embedding_sizes": {
+    "SPARSE_0": 16,
+    "SPARSE_1": 16,
+    "SPARSE_2": 16,
+    "SPARSE_3": 16,
+    "SPARSE_4": 16,
+    "SPARSE_5": 16,
+    "SPARSE_6": 16,
+    "SPARSE_7": 16,
+    "SPARSE_8": 16,
+    "SPARSE_9": 16,
+    "SPARSE_10": 16,
+    "SPARSE_11": 16,
+    "SPARSE_12": 16,
+    "SPARSE_13": 16,
+    "SPARSE_14": 16,
+    "SPARSE_15": 16,
+    "SPARSE_16": 16,
+    "SPARSE_17": 16,
+    "SPARSE_18": 16,
+    "SPARSE_19": 16,
+    "SPARSE_20": 16,
+    "SPARSE_21": 16,
+    "SPARSE_22": 16,
+    "SPARSE_23": 16,
+    "SPARSE_24": 16,
+    "SPARSE_25": 16
+  },
+  "dense_mlp": {"hidden_layer_sizes":  [32], "output_size": 16},
+  "prediction_hidden_sizes": [32],
+  "num_epochs": 1,
+  "learning_rate": 0.1,
+  "device": "cuda",
+  "batch_size": {
+    "train": 64,
+    "validation": 64
+  },
+  "batches_per_epoch": 10,
+  "use_modulus_hash": true
+}
