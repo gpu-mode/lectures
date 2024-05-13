@@ -82,3 +82,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 17: GPU Collective Communication (NCCL)
 - Date: 2024-05-04, Speaker: [Dan Johnson](https://physbam.stanford.edu/~dansj/)
 - Code in the [lecture_017](./lecture_017/) folder
+
+## Lecture 18: Fused Kernels
+- Date: 2024-05-11, Speaker: [Kapil Sharma](https://www.kapilsharma.dev/)
+- Code in the [lecture_018](./lecture_018/) folder
