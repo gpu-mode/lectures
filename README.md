@@ -1,6 +1,8 @@
 # Supplementary Material for Lectures
-
+discord.gg/cudamode
 The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](https://a.co/d/2S2fVzt) (Amazon link)
+[YouTube Channel](https://www.youtube.com/@CUDAMODE)
+
 
 
 ## Lecture 1: Profiling and Integrating CUDA kernels in PyTorch
@@ -86,3 +88,10 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 18: Fused Kernels
 - Date: 2024-05-11, Speaker: [Kapil Sharma](https://www.kapilsharma.dev/)
 - Code in the [lecture_018](./lecture_018/) folder
+
+## Lecture 19: Data Processing on GPUs
+- Date: 2024-05-18, Speaker: [Devavret Makkar](https://github.com/devavret)
+
+- ## Lecture 20: Scan Algorithm
+- Date: 2024-05-25, Speaker: [Izzat El Haj](https://ielhajj.github.io/)
+- [Slides](https://docs.google.com/presentation/d/1MEMsE5LKi6ush_60hlYu3-cz4DUCFzSL/edit?usp=sharing&ouid=106222972308395582904&rtpof=true&sd=true)
