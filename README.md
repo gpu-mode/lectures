@@ -81,6 +81,12 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Date: 2024-04-13, Speaker: [Umer Adil](https://twitter.com/UmerHAdil)
 - [Notebook](./lecture_014/A_Practitioners_Guide_to_Triton.ipynb)
 
+## Lecture 15: CUTLASS
+- Date: 2024-04-20, Speaker: [Eric Auld](https://github.com/ericauld)
+
+## Lecture 16: On Hands profiling
+- Date: 2024-04-27, Speaker: [Taylor Robbie](https://www.linkedin.com/in/taylor-robie/)
+
 ## Lecture 17: GPU Collective Communication (NCCL)
 - Date: 2024-05-04, Speaker: [Dan Johnson](https://physbam.stanford.edu/~dansj/)
 - Code in the [lecture_017](./lecture_017/) folder
