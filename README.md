@@ -98,14 +98,14 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 19: Data Processing on GPUs
 - Date: 2024-05-18, Speaker: [Devavret Makkar](https://github.com/devavret)
 
-- ## Lecture 20: Scan Algorithm
+## Lecture 20: Scan Algorithm
 - Date: 2024-05-25, Speaker: [Izzat El Haj](https://ielhajj.github.io/)
 - [Slides](https://docs.google.com/presentation/d/1MEMsE5LKi6ush_60hlYu3-cz4DUCFzSL/edit?usp=sharing&ouid=106222972308395582904&rtpof=true&sd=true)
 
-- ## Lecture 21: Scan Algorithm Part 2
+## Lecture 21: Scan Algorithm Part 2
 - Date: 2024-05-31, Speaker: [Izzat El Haj](https://ielhajj.github.io/)
 - [Slides](https://docs.google.com/presentation/d/1MEMsE5LKi6ush_60hlYu3-cz4DUCFzSL/edit?usp=sharing&ouid=106222972308395582904&rtpof=true&sd=true)
 
-- ## Lecture 22: Hacker's Guide to Speculative Decoding in VLLM
+## Lecture 22: Hacker's Guide to Speculative Decoding in VLLM
 - Date: 2024-06-01, Speaker: [Cade Daniel](https://x.com/cdnamz)
 - [Slides](https://docs.google.com/presentation/d/1p1xE-EbSAnXpTSiSI0gmy_wdwxN5XaULO3AnCWWoRe4/edit#slide=id.p)
