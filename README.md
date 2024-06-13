@@ -87,6 +87,10 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 16: On Hands profiling
 - Date: 2024-04-27, Speaker: [Taylor Robbie](https://www.linkedin.com/in/taylor-robie/)
 
+## Bonus Lecture: CUDA C++ llm.cpp
+- Date: 2024-04-27, Speaker: [Jake Hemstad & Georgii Evtushenko]()
+- [Slides](https://drive.google.com/drive/folders/1T-t0d_u0Xu8w_-1E5kAwmXNfF72x-HTA)
+
 ## Lecture 17: GPU Collective Communication (NCCL)
 - Date: 2024-05-04, Speaker: [Dan Johnson](https://physbam.stanford.edu/~dansj/)
 - Code in the [lecture_017](./lecture_017/) folder
@@ -109,3 +113,11 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 22: Hacker's Guide to Speculative Decoding in VLLM
 - Date: 2024-06-01, Speaker: [Cade Daniel](https://x.com/cdnamz)
 - [Slides](https://docs.google.com/presentation/d/1p1xE-EbSAnXpTSiSI0gmy_wdwxN5XaULO3AnCWWoRe4/edit#slide=id.p)
+
+## Lecture 23: Tensor Cores
+- Date: 2024-06-07, Speaker: [Vijay Thakkar & Pradeep Ramani]()
+- [Slides](https://drive.google.com/file/d/18sthk6IUOKbdtFphpm_jZNXoJenbWR8m/view)
+
+## Lecture 24: Scan at the Speed of Light
+- Date: 2024-06-08, Speaker: [Jake Hemstad & Georgii Evtushenko]()
+- [Slides](TODO)
