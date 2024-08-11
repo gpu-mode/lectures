@@ -27,18 +27,23 @@ inline unsigned int cdiv(unsigned int a, unsigned int b) {
 
 void vecAdd(float *A, float *B, float *C, int n) {
   float *A_d, *B_d, *C_d;
-  size_t size = n * sizeof(float);
+  size_t size = n * sizeof(float); // sizeof是以字节为单位的，对于float来说是4个字节，对应的是32位。
 
+  // 首先是进行内存的分配
   cudaMalloc((void **)&A_d, size);
   cudaMalloc((void **)&B_d, size);
   cudaMalloc((void **)&C_d, size);
 
+  // 将数据copy到GPU上
   cudaMemcpy(A_d, A, size, cudaMemcpyHostToDevice);
   cudaMemcpy(B_d, B, size, cudaMemcpyHostToDevice);
 
+  // 给的线程数是256
   const unsigned int numThreads = 256;
+  // block 块数位100/256=4 , 4个block块，每个block块有256个线程
   unsigned int numBlocks = cdiv(n, numThreads);
 
+  //执行加法的kernel
   vecAddKernel<<<numBlocks, numThreads>>>(A_d, B_d, C_d, n);
   gpuErrchk(cudaPeekAtLastError());
   gpuErrchk(cudaDeviceSynchronize());
@@ -51,17 +56,20 @@ void vecAdd(float *A, float *B, float *C, int n) {
 }
 
 int main() {
+  // 这里计算两个向量的加法
   const int n = 1000;
   float A[n];
   float B[n];
   float C[n];
 
   // generate some dummy vectors to add
+  //生成一些用于添加的虚拟向量
   for (int i = 0; i < n; i += 1) {
     A[i] = float(i);
     B[i] = A[i] / 1000.0f;
   }
 
+  // 调用add的kernel
   vecAdd(A, B, C, n);
 
   // print result
