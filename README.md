@@ -1,7 +1,10 @@
 # Supplementary Material for Lectures
-discord.gg/cudamode
-The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](https://a.co/d/2S2fVzt) (Amazon link)
+[![](https://dcbadge.vercel.app/api/server/cudamode?style=flat)](https://discord.gg/cudamode)
+
 [YouTube Channel](https://www.youtube.com/@CUDAMODE)
+
+The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](https://a.co/d/2S2fVzt) (Amazon link)
+
 
 ## Lecture 1: Profiling and Integrating CUDA kernels in PyTorch
 - Speaker: [Mark Saroufim](https://twitter.com/marksaroufim)
