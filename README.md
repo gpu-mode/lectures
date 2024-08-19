@@ -97,7 +97,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - [Slides](https://docs.google.com/presentation/d/1p1xE-EbSAnXpTSiSI0gmy_wdwxN5XaULO3AnCWWoRe4/edit#slide=id.p)
 
 ## Lecture 23: Tensor Cores
-- Speaker: [Vijay Thakkar & Pradeep Ramani]()
+- Speaker: Vijay Thakkar & Pradeep Ramani
 - [Slides](https://drive.google.com/file/d/18sthk6IUOKbdtFphpm_jZNXoJenbWR8m/view)
 
 ## Lecture 24: Scan at the Speed of Light
@@ -105,6 +105,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 ## Lecture 25: Speaking Composable Kernel
 - Speaker: Haocong Wang
+- [Slides](./lecture_025/AMD_ROCm_Speaking_Composable_Kernel_July_20_2024.pdf)
 
 ## Lecture 26: SYCL MODE (Intel GPU)
 - Speaker: Patric Zhao
