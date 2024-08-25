@@ -110,3 +110,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 26: SYCL MODE (Intel GPU)
 - Speaker: Patric Zhao
 - [Slides](https://docs.google.com/presentation/d/1SW4XKomAJhhJSH5-jpZI9Qlwp7TEunbV/edit?usp=sharing&ouid=106222972308395582904&rtpof=true&sd=true)
+
+## Lecture 27: gpu.cpp
+- Speaker: [Austin Huang](https://x.com/austinvhuang)
+- [Slides](https://gpucpp-presentation.answer.ai/)
