@@ -114,3 +114,13 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 27: gpu.cpp
 - Speaker: [Austin Huang](https://x.com/austinvhuang)
 - [Slides](https://gpucpp-presentation.answer.ai/)
+
+## Lecture 28: Liger Kernel
+- Speaker: [Byron Hsu](https://x.com/hsu_byron)
+- [Slides](https://docs.google.com/presentation/d/1CGTV-uKw9crrBo13q1jAzAFCFzlpZFjeL4bnK67pTd8/edit?usp=sharing)
+- Hands-on  Notebooks
+  1. [RMSNorm: Verifying Correctness and Performance](https://colab.research.google.com/drive/1CQYhul7MVG5F0gmqTBbx1O1HgolPgF0M?usp=sharing)
+  2. [FusedLinearCrossEntropy: Verifying Memory Reduction](https://colab.research.google.com/drive/1Z2QtvaIiLm5MWOs7X6ZPS1MN3hcIJFbj?usp=sharing)
+  3. [Convergence Comparison: Triton Kernel Patched vs. Original Model Layer-by-Layer](https://colab.research.google.com/drive/1e52FH0BcE739GZaVp-3_Dv7mc4jF1aif?usp=sharing)
+  4. [Contiguity is the hidden killer](https://colab.research.google.com/drive/1llnAdo0hc9FpxYRRnjih0l066NCp7Ylu?usp=sharing)
+  5. [Address int32 overflow](https://colab.research.google.com/drive/1WgaU_cmaxVzx8PcdKB5P9yHB6_WyGd4T?usp=sharing)
