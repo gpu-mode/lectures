@@ -1,7 +1,7 @@
 # Supplementary Material for Lectures
-[![](https://dcbadge.vercel.app/api/server/cudamode?style=flat)](https://discord.gg/cudamode)
+[![](https://dcbadge.vercel.app/api/server/gpumode?style=flat)](https://discord.gg/gpumode)
 
-[YouTube Channel](https://www.youtube.com/@CUDAMODE)
+[YouTube Channel](https://www.youtube.com/@GPUMODE)
 
 The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](https://a.co/d/2S2fVzt) (Amazon link)
 
