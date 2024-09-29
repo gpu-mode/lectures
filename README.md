@@ -124,3 +124,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
   3. [Convergence Comparison: Triton Kernel Patched vs. Original Model Layer-by-Layer](https://colab.research.google.com/drive/1e52FH0BcE739GZaVp-3_Dv7mc4jF1aif?usp=sharing)
   4. [Contiguity is the hidden killer](https://colab.research.google.com/drive/1llnAdo0hc9FpxYRRnjih0l066NCp7Ylu?usp=sharing)
   5. [Address int32 overflow](https://colab.research.google.com/drive/1WgaU_cmaxVzx8PcdKB5P9yHB6_WyGd4T?usp=sharing)
+
+## Lecture 29: Triton Internals
+- Speaker: [Kapil Sharma](https://www.kapilsharma.dev/)
+- Code/presentation in the [lecture_029](./lecture_029/) folder
