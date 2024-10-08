@@ -128,3 +128,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 29: Triton Internals
 - Speaker: [Kapil Sharma](https://www.kapilsharma.dev/)
 - Code/presentation in the [lecture_029](./lecture_029/) folder
+
+## Lecture 30: Quantized training
+- Speaker: [Thien Tran](https://github.com/gau-nernst)
+- Code/presentation in the [lecture_030](./lecture_030/) folder
