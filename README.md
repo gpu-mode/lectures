@@ -132,3 +132,8 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 30: Quantized training
 - Speaker: [Thien Tran](https://github.com/gau-nernst)
 - Code/presentation in the [lecture_030](./lecture_030/) folder
+
+## Lecture 31: Beginners Guide to Metal Kernels
+- Speaker: [Nikita Shulga](https://github.com/gau-nernst)
+- Code/presentation in the [lecture_031](./lecture_031/) folder
+
