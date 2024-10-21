@@ -137,3 +137,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: [Nikita Shulga](https://github.com/gau-nernst)
 - Code/presentation in the [lecture_031](./lecture_031/) folder
 
+## Lecture 32: Unsloth - LLM Systems Engineering
+- Speaker: [Daniel Han](https://x.com/danielhanchen)
+- [Slides](https://docs.google.com/presentation/d/1BvgbDwvOY6Uy6jMuNXrmrz_6Km_CBW0f2espqeQaWfc/edit?usp=sharing)
+
