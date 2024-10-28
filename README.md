@@ -141,3 +141,6 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: [Daniel Han](https://x.com/danielhanchen)
 - [Slides](https://docs.google.com/presentation/d/1BvgbDwvOY6Uy6jMuNXrmrz_6Km_CBW0f2espqeQaWfc/edit?usp=sharing)
 
+## Lecture 33: BitBLAS
+- Speaker: [Wang Lei](https://github.com/LeiWang1999)
+- Code/presentation in the [lecture_033](./lecture_033/) folder
