@@ -148,3 +148,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 34: Low Bit Triton Kernels
 - Speaker: [Hicham Badri](https://github.com/mobicham)
 - [Slides](https://docs.google.com/presentation/d/1R9B6RLOlAblyVVFPk9FtAq6MXR1ufj1NaT0bjjib7Vc/edit)
+
+## Lecture 35: SGLang Performance Optimization
+- Speaker: [Yineng Zhang](https://linkedin.com/in/zhyncs)
+- [Slides](https://github.com/zhyncs/lectures/blob/main/lecture_035/SGLang-Performance-Optimization-YinengZhang.pdf)
