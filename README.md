@@ -152,3 +152,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 35: SGLang Performance Optimization
 - Speaker: [Yineng Zhang](https://linkedin.com/in/zhyncs)
 - [Slides](https://github.com/zhyncs/lectures/blob/main/lecture_035/SGLang-Performance-Optimization-YinengZhang.pdf)
+
+# Lecture 36: CUTLASS and Flash ATtention 3
+- Speaker: [Jay Shah](https://research.colfax-intl.com/blog/)
+- [Slides](test)
