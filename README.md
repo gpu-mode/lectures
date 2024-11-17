@@ -155,4 +155,4 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 # Lecture 36: CUTLASS and Flash ATtention 3
 - Speaker: [Jay Shah](https://research.colfax-intl.com/blog/)
-- [Slides](test)
+- [Slides](lecture_036/)
