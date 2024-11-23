@@ -156,3 +156,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 # Lecture 36: CUTLASS and Flash ATtention 3
 - Speaker: [Jay Shah](https://research.colfax-intl.com/blog/)
 - [Slides](lecture_036/)
+
+# Lecture 37: Introduction to SASS & GPU Microarchitecture
+- Speaker: [Arun Demeure](https://github.com/ademeure)
+- [Slides](lecture_037/)
