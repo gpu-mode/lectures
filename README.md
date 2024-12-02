@@ -160,3 +160,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 # Lecture 37: Introduction to SASS & GPU Microarchitecture
 - Speaker: [Arun Demeure](https://github.com/ademeure)
 - [Slides](lecture_037/)
+
+# Lecture 38: Lowbit kernels for ARM CPU
+- Speaker: [Scott Roy](https://github.com/metascroy)
+- [Slides](lecture_038/)
