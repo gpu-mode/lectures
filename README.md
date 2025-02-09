@@ -164,3 +164,17 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 # Lecture 38: Lowbit kernels for ARM CPU
 - Speaker: [Scott Roy](https://github.com/metascroy)
 - [Slides](lecture_038/)
+
+# Lecture 39: Flash Infer
+- Speaker: [Zihao Ye](https://homes.cs.washington.edu/~zhye/)
+
+# Lecture 40: CUDA Docs for Humans
+- Speaker: [Charles Frye](https://x.com/charles_irl/status/1867306225706447023)
+- [Slides](https://docs.google.com/presentation/d/15lTG6aqf72Hyk5_lqH7iSrc8aP1ElEYxCxch-tD37PE/edit#slide=id.g326210b960f_0_42)
+ 
+# Lecture 41: Mosaic GPU
+- Speaker: [Adam Paszke](https://x.com/apaszke)
+
+# Lecture 42:
+- Speaker: Erik Schultheis
+- [Slides](lecture_042)
