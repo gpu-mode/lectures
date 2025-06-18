@@ -181,3 +181,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 # Lecture 43:
 - Speaker: Erik Schultheis
 - [Slides](lecture_042)
+
+# Lecture 57:
+- Speaker: Cris Cecka
+- [Slides](lecture_057)
