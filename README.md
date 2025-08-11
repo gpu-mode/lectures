@@ -153,35 +153,35 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: [Yineng Zhang](https://linkedin.com/in/zhyncs)
 - [Slides](https://github.com/zhyncs/lectures/blob/main/lecture_035/SGLang-Performance-Optimization-YinengZhang.pdf)
 
-# Lecture 36: CUTLASS and Flash ATtention 3
+## Lecture 36: CUTLASS and Flash ATtention 3
 - Speaker: [Jay Shah](https://research.colfax-intl.com/blog/)
 - [Slides](lecture_036/)
 
-# Lecture 37: Introduction to SASS & GPU Microarchitecture
+## Lecture 37: Introduction to SASS & GPU Microarchitecture
 - Speaker: [Arun Demeure](https://github.com/ademeure)
 - [Slides](lecture_037/)
 
-# Lecture 38: Lowbit kernels for ARM CPU
+## Lecture 38: Lowbit kernels for ARM CPU
 - Speaker: [Scott Roy](https://github.com/metascroy)
 - [Slides](lecture_038/)
 
-# Lecture 39: TorchTitan
+## Lecture 39: TorchTitan
 - Speaker: Mark Saroufim and Tianyu Liu
 
-# Lecture 40: Flash Infer
+## Lecture 40: Flash Infer
 - Speaker: [Zihao Ye](https://homes.cs.washington.edu/~zhye/)
 
-# Lecture 41: CUDA Docs for Humans
+## Lecture 41: CUDA Docs for Humans
 - Speaker: [Charles Frye](https://x.com/charles_irl/status/1867306225706447023)
 - [Slides](https://docs.google.com/presentation/d/15lTG6aqf72Hyk5_lqH7iSrc8aP1ElEYxCxch-tD37PE/edit#slide=id.g326210b960f_0_42)
  
-# Lecture 42: Mosaic GPU
+## Lecture 42: Mosaic GPU
 - Speaker: [Adam Paszke](https://x.com/apaszke)
 
-# Lecture 43:
+## Lecture 43:
 - Speaker: Erik Schultheis
 - [Slides](lecture_042)
 
-# Lecture 57:
+## Lecture 57:
 - Speaker: Cris Cecka
 - [Slides](lecture_057)
