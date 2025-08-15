@@ -21,6 +21,18 @@ extern "C" __global__ void flash_attention_spilling_from_registers_k(
     int T_c
 );
 
+extern "C" __global__ void flash_attention_k(
+    float *out, 
+    float *out_l, 
+    float *Q,
+    float *K, 
+    float *V, 
+    float scaling, 
+    int n, 
+    int T_r, 
+    int T_c
+);
+
 inline unsigned int cdiv(unsigned int a, unsigned int b) { return (a + b - 1) / b; }
 
 int main() {
@@ -31,7 +43,7 @@ int main() {
 
     int B_r = 16;      // block tile rows
     int B_c = 16;      // block tile cols
-    int block_dim_x = 16;
+    int block_dim_x = 32;
     int block_dim_y = 16;
 
     // Host allocations
@@ -76,6 +88,25 @@ int main() {
 
     // Kernel launch
     flash_attention_spilling_from_registers_k<<<blocks, threads>>>(
+        d_out, 
+        d_out_l,
+        d_Q, 
+        d_K, 
+        d_V, 
+        scaling,
+        n,
+        T_r,
+        T_c
+    );
+    CUDA_CHECK(cudaGetLastError());
+    CUDA_CHECK(cudaDeviceSynchronize());
+
+    printf("Kernel finished.\n");
+
+    printf("Launching kernel...\n");
+
+    // Kernel launch
+    flash_attention_k<<<blocks, threads>>>(
         d_out, 
         d_out_l,
         d_Q, 
