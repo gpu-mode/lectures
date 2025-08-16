@@ -1,8 +1,8 @@
-constexpr int B_r = 16;
+constexpr int B_r = 32;
 constexpr int B_c = 16;
 constexpr int d = 128;
-constexpr int block_dim_x = 32;
-constexpr int block_dim_y = 16;
+constexpr int block_dim_x = 16;
+constexpr int block_dim_y = 32;
 constexpr int o_per_thread_x = d / block_dim_x;
 constexpr int o_per_thread_y = B_r / block_dim_y;
 

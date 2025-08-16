@@ -1,9 +1,9 @@
-constexpr int B_r = 16;
+constexpr int B_r = 32;
 constexpr int B_c = 16;
 constexpr int d = 128;
 constexpr int n_out_max = 4096;
-constexpr int block_dim_x = 32;
-constexpr int block_dim_y = 16;
+constexpr int block_dim_x = 16;
+constexpr int block_dim_y = 32;
 
 #define NEG_INFINITY __int_as_float(0xff800000)
 
