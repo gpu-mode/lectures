@@ -1,10 +1,10 @@
 constexpr int B_r = 32;
 constexpr int B_c = 16;
 constexpr int d = 128;
-constexpr int block_dim_x = 16;
-constexpr int block_dim_y = 32;
-constexpr int o_per_thread_x = d / block_dim_x;
-constexpr int o_per_thread_y = B_r / block_dim_y;
+constexpr int block_dim_x = 32;
+constexpr int block_dim_y = 16;
+constexpr int d_over_dim_x = d / block_dim_x;
+constexpr int B_r_over_dim_y = B_r / block_dim_y;
 
 #define NEG_INFINITY __int_as_float(0xff800000)
 
@@ -21,8 +21,10 @@ extern "C" __global__ void flash_attention_k(
     int T_c
 ) {
     // Thread indices
-    int tid_x = threadIdx.x; // 0..3 (block_x_dim)
-    int tid_y = threadIdx.y; // 0..31 (block_y_dim)
+    int tid_x = threadIdx.x; 
+    int tid_y = threadIdx.y; 
+    int dim_y = blockDim.y; 
+    int dim_x = blockDim.x; 
 
     // Shared memory buffers for Q, K, V blocks
     __shared__ float Q_i[B_r][d];       // 16 x 128
@@ -31,9 +33,9 @@ extern "C" __global__ void flash_attention_k(
     __shared__ float S[B_r][B_c];     //16 X 16
 
     // Local accumulators per thread for output block
-    float l_i[o_per_thread_y];
-    float m_i[o_per_thread_y];
-    float O_i[o_per_thread_y][o_per_thread_x];
+    float l_i[B_r_over_dim_y];
+    float m_i[B_r_over_dim_y];
+    float O_i[B_r_over_dim_y][d_over_dim_x];
 
     // Loop over output tile blocks (T_r)
     for (int i = 0; i < T_r; i++) {
@@ -42,10 +44,14 @@ extern "C" __global__ void flash_attention_k(
         for (int ii = tid_y; ii < B_r; ii += blockDim.y) {
             for (int dd = tid_x; dd < d; dd += blockDim.x) {
                 Q_i[ii][dd] = Q[(ii + i * B_r) * d + dd];
-                O_i[ii/block_dim_y][dd/block_dim_x] = 0;
             }
-            l_i[ii/block_dim_y] = 0.f;
-            m_i[ii/block_dim_y] = NEG_INFINITY;
+        }
+        for (int ii = 0; ii < B_r_over_dim_y; ii ++) {
+            for (int dd = 0; dd < d_over_dim_x; dd ++) {
+                O_i[ii][dd] = 0;
+            }
+            l_i[ii] = 0.f;
+            m_i[ii] = NEG_INFINITY;
         }
         __syncthreads();
 
@@ -70,37 +76,37 @@ extern "C" __global__ void flash_attention_k(
                 }
             }
             __syncthreads();
-            for (int ii = tid_y; ii < B_r; ii += blockDim.y) {
-                float m = m_i[ii/block_dim_y];
+            for (int ii = 0; ii < B_r_over_dim_y; ii ++) {
+                float m = m_i[ii];
                 float last_m = m;
                 for (int jj = 0; jj < B_c; jj++) {
-                    if (m < S[ii][jj]) {
-                        m = S[ii][jj];
+                    if (m < S[ii * dim_y + tid_y][jj]) {
+                        m = S[ii * dim_y + tid_y][jj];
                     }
                 }
-                m_i[ii/block_dim_y] = m;
-                float l = exp(last_m - m) * l_i[ii/block_dim_y];
+                m_i[ii] = m;
+                float l = exp(last_m - m) * l_i[ii];
 
-                for (int dd = tid_x; dd < d; dd += blockDim.x) {
-                    O_i[ii/block_dim_y][dd/block_dim_x] *= exp(last_m - m);
+                for (int dd = 0; dd < d_over_dim_x; dd ++) {
+                    O_i[ii][dd] *= exp(last_m - m);
                 }
 
                 for (int jj = 0; jj < B_c; jj++) {
-                    float P_ij = exp(S[ii][jj] - m);
+                    float P_ij = exp(S[ii * dim_y + tid_y][jj] - m);
                     l += P_ij;
-                    for (int dd = tid_x; dd < d; dd += blockDim.x) {
-                        O_i[ii/block_dim_y][dd/block_dim_x] +=  P_ij * V_j[jj][dd];
+                    for (int dd = 0; dd < d_over_dim_x; dd ++) {
+                        O_i[ii][dd] +=  P_ij * V_j[jj][dd * dim_x + tid_x];
                     }
                 }
-                l_i[ii/block_dim_y] = l;
+                l_i[ii] = l;
             }
         }
         __syncthreads();
-        for (int ii = tid_y; ii < B_r; ii += blockDim.y) {
-            for (int dd = tid_x; dd < d; dd += blockDim.x) {
-                out[(ii + i * B_r) * d + dd] = O_i[ii/block_dim_y][dd/block_dim_x] / l_i[ii/block_dim_y];
+        for (int ii = 0; ii < B_r_over_dim_y; ii ++) {
+            for (int dd = 0; dd < d_over_dim_x; dd ++) {
+                out[(ii * dim_y + tid_y + i * B_r) * d + dd * blockDim.x + tid_x] = O_i[ii][dd] / l_i[ii];
             }
-            out_l[ii + i * B_r] = m_i[ii/block_dim_y] + log(l_i[ii/block_dim_y]);
+            out_l[ii * dim_y + tid_y + i * B_r] = m_i[ii] + log(l_i[ii]);
         }
     }
 }
