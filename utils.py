@@ -36,7 +36,7 @@ def load_cuda(cuda_src, cpp_src, funcs, opt=True, verbose=False, name=None):
     if name is None: name = funcs[0]
     flags = "-O3 -Xptxas -O3 -Xcompiler -O3" if opt else "-O0 -Xptxas -O0 -Xcompiler -O0"
     return load_inline(cuda_sources=[cuda_src], cpp_sources=[cpp_src], functions=funcs,
-                       extra_cuda_cflags=[flags], verbose=verbose, name=name)
+                       extra_cuda_cflags=[flags], verbose=verbose, name=name + "test")
 
 def cdiv(a,b):
     "Int ceiling division of `a` over `b`"
