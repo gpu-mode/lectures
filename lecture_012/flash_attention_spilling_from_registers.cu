@@ -1,9 +1,9 @@
-constexpr int B_r = 32;
+constexpr int B_r = 16;
 constexpr int B_c = 16;
 constexpr int d = 128;
 constexpr int n_out_max = 4096;
 constexpr int block_dim_x = 16;
-constexpr int block_dim_y = 32;
+constexpr int block_dim_y = 16;
 
 #define NEG_INFINITY __int_as_float(0xff800000)
 
@@ -20,8 +20,8 @@ extern "C" __global__ void flash_attention_spilling_from_registers_k(
     int T_c
 ) {
     // Thread indices
-    int tid_x = threadIdx.x; // 0..3 (block_x_dim)
-    int tid_y = threadIdx.y; // 0..31 (block_y_dim)
+    int tid_x = threadIdx.x;
+    int tid_y = threadIdx.y;
 
     // Shared memory buffers for Q, K, V blocks
     __shared__ float Q_i[B_r][d];       // 16 x 128
@@ -96,13 +96,14 @@ extern "C" __global__ void flash_attention_spilling_from_registers_k(
                 l_i[ii] = l;
             }
         }
-        __syncthreads();
+
         for (int ii = tid_y; ii < B_r; ii += blockDim.y) {
             for (int dd = tid_x; dd < d; dd += blockDim.x) {
                 out[(ii + i * B_r) * d + dd] = O_i[ii][dd] / l_i[ii];
             }
             out_l[ii + i * B_r] = m_i[ii] + log(l_i[ii]);
         }
+        __syncthreads();
     }
 }
 
