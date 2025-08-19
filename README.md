@@ -185,3 +185,8 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 # Lecture 57:
 - Speaker: Cris Cecka
 - [Slides](lecture_057)
+
+## Lecture 67
+- Speaker: Jeff Hammond
+- [Slides](https://drive.google.com/file/d/1T8uHhFIeVa_g1oYb_O4d2Ltb8YQly1zK/view?usp=sharing)
+- [Code](https://github.com/ParRes/Kernels/tree/main/Cxx11)
