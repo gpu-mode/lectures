@@ -26,10 +26,10 @@ extern "C" __global__ void flash_attention_k(
     int bix = blockIdx.x; 
 
     // Shared memory buffers for Q, K, V blocks
-    __shared__ float Q_i[B_r][d];       // 16 x 128
-    __shared__ float K_j[B_c][d];       // 16 x 128
-    __shared__ float V_j[B_c][d];       // 16 x 128
-    __shared__ float S[B_r][B_c];     //16 X 16
+    __shared__ float Q_i[B_r][d];
+    __shared__ float K_j[B_c][d];
+    __shared__ float V_j[B_c][d];
+    __shared__ float S[B_r][B_c];
 
     // Local accumulators per thread for output block
     float l_i[B_r_over_bdy];
@@ -52,7 +52,6 @@ extern "C" __global__ void flash_attention_k(
             l_i[ii] = 0.f;
             m_i[ii] = 1e-30f;
         }
-        __syncthreads();
 
         for (int j = 0; j < T_c; j++){
             // Load K_j, V_j into shared memory
@@ -76,6 +75,7 @@ extern "C" __global__ void flash_attention_k(
             }
             __syncthreads();
             for (int ii = 0; ii < B_r_over_bdy; ii ++) {
+                // Get max m_i[ii]
                 float m = m_i[ii];
                 float last_m = m;
                 for (int jj = 0; jj < B_c; jj++) {
@@ -86,9 +86,11 @@ extern "C" __global__ void flash_attention_k(
                 m_i[ii] = m;
                 float l = expf(last_m - m) * l_i[ii];
 
+                // Scale O_i
                 for (int dd = 0; dd < d_over_bdx; dd ++) {
                     O_i[ii][dd] *= expf(last_m - m);
                 }
+                // Compute P_ij, add it to l and add P_ij*V_ij to O_i
                 for (int jj = 0; jj < B_c; jj++) {
                     float P_ij = expf(S[ii * bdy + tid_y][jj] - m);
                     l += P_ij;
@@ -100,6 +102,7 @@ extern "C" __global__ void flash_attention_k(
             }
         }
         
+        // Write outputs to HBM
         for (int ii = 0; ii < B_r_over_bdy; ii ++) {
             for (int dd = 0; dd < d_over_bdx; dd ++) {
                 out[(ii * bdy + tid_y + i * B_r) * d + dd * bdx + tid_x] = O_i[ii][dd] / l_i[ii];
