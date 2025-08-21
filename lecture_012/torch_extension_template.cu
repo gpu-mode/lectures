@@ -17,7 +17,7 @@ std::tuple<torch::Tensor, torch::Tensor> your_function_name(torch::Tensor Q, tor
     int T_r = cdiv(n, B_r);
     int T_c = cdiv(n_inp, B_c);
 
-    dim3 blocks(1, 1);      
+    dim3 blocks(T_r, 1);      
     dim3 tpb(block_dim_x, block_dim_y); 
     your_function_name_k<<<blocks, tpb>>>(
         out.data_ptr<float>(),

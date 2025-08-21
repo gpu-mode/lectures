@@ -1,8 +1,8 @@
-constexpr int B_r = 16;
-constexpr int B_c = 16;
 constexpr int d = 128;
-constexpr int block_dim_x = 16;
-constexpr int block_dim_y = 16;
+constexpr int B_r = 8;
+constexpr int B_c = 32;
+constexpr int block_dim_x = 128;
+constexpr int block_dim_y = 8;
 constexpr int d_over_bdx = d / block_dim_x;
 constexpr int B_r_over_bdy = B_r / block_dim_y;
 
@@ -23,6 +23,7 @@ extern "C" __global__ void flash_attention_k(
     int tid_y = threadIdx.y; 
     int bdy = blockDim.y; 
     int bdx = blockDim.x; 
+    int bix = blockIdx.x; 
 
     // Shared memory buffers for Q, K, V blocks
     __shared__ float Q_i[B_r][d];       // 16 x 128
@@ -35,8 +36,8 @@ extern "C" __global__ void flash_attention_k(
     float m_i[B_r_over_bdy];
     float O_i[B_r_over_bdy][d_over_bdx];
 
-    // Loop over output tile blocks (T_r)
-    for (int i = 0; i < T_r; i++) {
+    // Loop over only one tile block out of T_r blocks
+    for (int i = bix; i < bix + 1; i++) {
         // Load Q_i tile into shared mem
         for (int ii = tid_y; ii < B_r; ii += bdy) {
             for (int dd = tid_x; dd < d; dd += bdx) {

@@ -1,11 +1,8 @@
 constexpr int B_r = 16;
 constexpr int B_c = 16;
 constexpr int d = 128;
-constexpr int n_out_max = 4096;
 constexpr int block_dim_x = 16;
 constexpr int block_dim_y = 16;
-
-#define NEG_INFINITY __int_as_float(0xff800000)
 
 
 extern "C" __global__ void flash_attention_spilling_from_registers_k(
@@ -22,6 +19,7 @@ extern "C" __global__ void flash_attention_spilling_from_registers_k(
     // Thread indices
     int tid_x = threadIdx.x;
     int tid_y = threadIdx.y;
+    int bix = blockIdx.x; 
 
     // Shared memory buffers for Q, K, V blocks
     __shared__ float Q_i[B_r][d];       // 16 x 128
@@ -35,7 +33,7 @@ extern "C" __global__ void flash_attention_spilling_from_registers_k(
     float m_i[B_r];
     float O_i[B_r][d];
 
-
+    if (bix == 0) {
     // Loop over output tile blocks (T_r)
     for (int i = 0; i < T_r; i++) {
         // Init O_i, l_i, m_i into registers
@@ -46,7 +44,7 @@ extern "C" __global__ void flash_attention_spilling_from_registers_k(
                 O_i[ii][dd] = 0;
             }
             l_i[ii] = 0.f;
-            m_i[ii] = NEG_INFINITY;
+            m_i[ii] = -1e30f;
         }
         __syncthreads();
 
@@ -105,6 +103,7 @@ extern "C" __global__ void flash_attention_spilling_from_registers_k(
         }
         __syncthreads();
     }
+}
 }
 
 
