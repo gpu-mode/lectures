@@ -190,3 +190,9 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: Jeff Hammond
 - [Slides](https://drive.google.com/file/d/1T8uHhFIeVa_g1oYb_O4d2Ltb8YQly1zK/view?usp=sharing)
 - [Code](https://github.com/ParRes/Kernels/tree/main/Cxx11)
+
+## Lecture 69: Quartet 4 bit training
+- Speakers: Roberto Castro and Andrei Panferov
+- [Code]: https://github.com/IST-DASLab/Quartet and https://github.com/isT-DASLab/qutlass Roberto Castro and Andrei Panferov
+- [Paper](https://arxiv.org/abs/2505.14669)
+
