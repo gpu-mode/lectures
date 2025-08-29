@@ -5,8 +5,8 @@
 
 __global__ void SharedMemoryReduction(float* input, float* output, int n) {
     __shared__ float input_s[BLOCK_DIM]; 
-    unsigned int idx = blockIdx.x * blockDim.x + threadIdx.x; // index within a block
-    unsigned int t = threadIdx.x; // global index
+    unsigned int idx = blockIdx.x * blockDim.x + threadIdx.x; // global index
+    unsigned int t = threadIdx.x; // index within a block
 
     // Load elements into shared memory
     if (idx < n) {
