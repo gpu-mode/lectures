@@ -193,6 +193,9 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 ## Lecture 69: Quartet 4 bit training
 - Speakers: Roberto Castro and Andrei Panferov
-- [Code]: https://github.com/IST-DASLab/Quartet and https://github.com/isT-DASLab/qutlass Roberto Castro and Andrei Panferov
+- Code: https://github.com/IST-DASLab/Quartet and https://github.com/isT-DASLab/qutlass Roberto Castro and Andrei Panferov
 - [Paper](https://arxiv.org/abs/2505.14669)
 
+# Lecture 70: Fault tolerant communication collectives
+- Speaker: mike64_t
+- [Slides](https://docs.google.com/presentation/d/1MKB51lhNOsV-Y_hscSaJk7wZskzxft2pFJQZKyvcMyo/edit?usp=sharing)
