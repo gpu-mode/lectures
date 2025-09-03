@@ -54,6 +54,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 ## Lecture 12: Flash Attention
 - Speaker: [Thomas Viehmann](https://lernapparat.de/)
+- Code in the [lecture_012](./lecture_012/) folder
 
 ## Lecture 13: Ring Attention
 - Speaker: [Andreas Koepf](https://twitter.com/neurosp1ke)
