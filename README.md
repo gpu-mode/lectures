@@ -54,6 +54,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 
 ## Lecture 12: Flash Attention
 - Speaker: [Thomas Viehmann](https://lernapparat.de/)
+- Code in the [lecture_012](./lecture_012/) folder
 
 ## Lecture 13: Ring Attention
 - Speaker: [Andreas Koepf](https://twitter.com/neurosp1ke)
@@ -182,6 +183,24 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: Erik Schultheis
 - [Slides](lecture_042)
 
-## Lecture 57:
+## Lecture 57: CuTE
 - Speaker: Cris Cecka
 - [Slides](lecture_057)
+
+## Lecture 67: NCCL & NVSHMEM
+- Speaker: Jeff Hammond
+- [Slides](https://drive.google.com/file/d/1T8uHhFIeVa_g1oYb_O4d2Ltb8YQly1zK/view?usp=sharing)
+- [Code](https://github.com/ParRes/Kernels/tree/main/Cxx11)
+
+## Lecture 69: Quartet 4 bit training
+- Speakers: Roberto Castro and Andrei Panferov
+- Code: https://github.com/IST-DASLab/Quartet and https://github.com/isT-DASLab/qutlass Roberto Castro and Andrei Panferov
+- [Paper](https://arxiv.org/abs/2505.14669)
+
+## Lecture 70: Fault tolerant communication collectives
+- Speaker: mike64_t
+- [Slides](https://docs.google.com/presentation/d/1MKB51lhNOsV-Y_hscSaJk7wZskzxft2pFJQZKyvcMyo/edit?usp=sharing)
+
+## Lecture 78: Iris: Multi-GPU Programming in Triton
+Speakers: Muhammad Awad, Muhammad Osama & Brandon Potter
+- [Slides](lecture_078)
