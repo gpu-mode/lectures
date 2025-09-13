@@ -199,3 +199,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 # Lecture 70: Fault tolerant communication collectives
 - Speaker: mike64_t
 - [Slides](https://docs.google.com/presentation/d/1MKB51lhNOsV-Y_hscSaJk7wZskzxft2pFJQZKyvcMyo/edit?usp=sharing)
+
+## Lecture 78: Iris: Multi-GPU Programming in Triton
+Speakers: Muhammad Awad, Muhammad Osama & Brandon Potter
+- [Slides](lecture_078)
