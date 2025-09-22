@@ -201,6 +201,12 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: mike64_t
 - [Slides](https://docs.google.com/presentation/d/1MKB51lhNOsV-Y_hscSaJk7wZskzxft2pFJQZKyvcMyo/edit?usp=sharing)
 
+## Lecture 75: [ScaleML Series] GPU Programming Fundamentals + ThunderKittens
+- Speaker 1: William Brandon
+- [Slides 1](https://docs.google.com/presentation/d/1ypi4IjEF36PUZGOJSaFxjNzk7BpO61TicdTBBf77oqc/)
+- Speaker 2: [Simran Arora](https://arorasimran.com)
+- [Slides 2](lecture_075)
+
 ## Lecture 78: Iris: Multi-GPU Programming in Triton
 Speakers: Muhammad Awad, Muhammad Osama & Brandon Potter
 - [Slides](lecture_078)
