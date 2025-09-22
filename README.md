@@ -204,3 +204,7 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 ## Lecture 78: Iris: Multi-GPU Programming in Triton
 Speakers: Muhammad Awad, Muhammad Osama & Brandon Potter
 - [Slides](lecture_078)
+
+## Lecture 79: Mirage (MPK): Compiling LLMs into Mega Kernels
+Speakers: Mengdi Wu, Xinhao Cheng
+- [Slides](lecture_079)
