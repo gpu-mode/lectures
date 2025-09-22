@@ -201,6 +201,10 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: mike64_t
 - [Slides](https://docs.google.com/presentation/d/1MKB51lhNOsV-Y_hscSaJk7wZskzxft2pFJQZKyvcMyo/edit?usp=sharing)
 
+## Lecture 72: [ScaleML Series] Efficient & Effective Long-Context Modeling for Large Language Models
+- Speaker: [Guangxuan Xiao](https://guangxuanx.com)
+- [Slides](lecture_072)
+
 ## Lecture 75: [ScaleML Series] GPU Programming Fundamentals + ThunderKittens
 - Speaker 1: William Brandon
 - [Slides 1](https://docs.google.com/presentation/d/1ypi4IjEF36PUZGOJSaFxjNzk7BpO61TicdTBBf77oqc/)
