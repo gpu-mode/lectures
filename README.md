@@ -209,11 +209,15 @@ The PMPP Book: [Programming Massively Parallel Processors: A Hands-on Approach](
 - Speaker: [Guangxuan Xiao](https://guangxuanx.com)
 - [Slides](lecture_072)
 
+## Lecture 74: [ScaleML Series] Positional Encodings and PaTH Attention
+- Speaker: [Songlin Yang](https://sustcsonglin.github.io)
+- [Slides](lecture_074)
+
 ## Lecture 75: [ScaleML Series] GPU Programming Fundamentals + ThunderKittens
 - Speaker 1: William Brandon
-- [Slides 1](https://docs.google.com/presentation/d/1ypi4IjEF36PUZGOJSaFxjNzk7BpO61TicdTBBf77oqc/)
+  - [Slides 1](https://docs.google.com/presentation/d/1ypi4IjEF36PUZGOJSaFxjNzk7BpO61TicdTBBf77oqc/)
 - Speaker 2: [Simran Arora](https://arorasimran.com)
-- [Slides 2](lecture_075)
+  - [Slides 2](lecture_075)
 
 ## Lecture 78: Iris: Multi-GPU Programming in Triton
 Speakers: Muhammad Awad, Muhammad Osama & Brandon Potter
