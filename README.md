@@ -226,3 +226,7 @@ Speakers: Muhammad Awad, Muhammad Osama & Brandon Potter
 ## Lecture 79: Mirage (MPK): Compiling LLMs into Mega Kernels
 Speakers: Mengdi Wu, Xinhao Cheng
 - [Slides](lecture_079)
+
+## Lecture 84: Numerics and AI
+Speaker: Paulius Micikevicius
+- [Slides](lecture_084)
