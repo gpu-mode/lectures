@@ -234,3 +234,7 @@ Speaker: Paulius Micikevicius
 ## Lecture 86: Introduction to CuTeDSL (for NVIDIA competition)
 Speaker: Vicki Wang
 - [Slides](lecture_086)
+
+## Lecture 103: Fundamentals of CuTe Layout Algebra and Category-theoretic Interpretation
+Speaker: Jack Carlisle and Jay Shah
+- [Slides](lecture_103)
