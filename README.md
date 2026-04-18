@@ -236,5 +236,5 @@ Speaker: Vicki Wang
 - [Slides](lecture_086)
 
 ## Lecture 103: Fundamentals of CuTe Layout Algebra and Category-theoretic Interpretation
-Speaker: Colfax Research: Jack Carlisle, Jay Shah, Reuben Stern, Paul VanKoughnett
+Speaker: Jack Carlisle and Jay Shah
 - [Slides](lecture_103)
