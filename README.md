@@ -238,3 +238,7 @@ Speaker: Vicki Wang
 ## Lecture 103: Fundamentals of CuTe Layout Algebra and Category-theoretic Interpretation
 Speaker: Jack Carlisle and Jay Shah
 - [Slides](lecture_103)
+
+## Lecture 104: Gluon: Tile-Based GPU Programming with Low-Level Control
+Speakers: Peter Bell, Mario Lezcano, Keren Zhou
+- [Slides and notes](lecture_104)
