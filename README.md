@@ -245,3 +245,8 @@ Speakers: Peter Bell, Mario Lezcano, Keren Zhou
 
 ## Lecture 106: HF kernels
 - [Slides](https://docs.google.com/presentation/d/1RibAIrOJv0BcAx2QjNYHDZCrMfGYifTggtKT6uwv7CY/edit)
+
+## Lecture 114: PyCuTe
+Speaker: Cris Cecka
+- [Slides](lecture_114)
+- [Code](https://github.com/NVlabs/CuTe)
