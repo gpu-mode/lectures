@@ -248,5 +248,5 @@ Speakers: Peter Bell, Mario Lezcano, Keren Zhou
 
 ## Lecture 114: PyCuTe
 Speaker: Cris Cecka
-- [Slides] (lecture_114)
+- [Slides](lecture_114)
 - [Code](https://github.com/NVlabs/CuTe)
